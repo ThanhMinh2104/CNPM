@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /validation-demo
+
+spring:
+  datasource:
+    url: "jdbc:mariadb://localhost:3306/validationDB"
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
+
+jwt:
+  signer_key: "e3dbc55903f043a718c336a343ce4dc03dcb51eee6ddb7041d1667d682eff5ff"
